@@ -31,6 +31,7 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.doze.PocketService;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
@@ -52,6 +53,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
+        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) return;
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
         try {
@@ -82,5 +84,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         //Dc Dimming Support (requires kernel support)
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+
+        // Pocket
+        PocketService.startService(context);
+
     }
 }
