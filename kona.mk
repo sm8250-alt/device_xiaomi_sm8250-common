@@ -4,7 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
+# Build ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+# Apex
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Setup dalvik vm configs
