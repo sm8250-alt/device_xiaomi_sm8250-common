@@ -89,9 +89,6 @@ ro.miui.notch=1
 # Disable vsync for cpu rendered apps
 debug.cpurend.vsync=false
 
-# Disable Skia tracing by default
-debug.hwui.skia_atrace_enabled=false
-
 #Enable Blur Props
 ro.sf.blurs_are_expensive=1 \
 ro.surface_flinger.supports_background_blur=1
