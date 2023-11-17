@@ -1,4 +1,2 @@
-# Xiaomi Vibrator Feature
-android.hardware.vibrator.IVibrator/vibratorfeature                          u:object_r:hal_vibrator_service:s0
 # NFC
 vendor.nxp.nxpnfc_aidl.INxpNfc/default                                    u:object_r:hal_nfc_service:s0
