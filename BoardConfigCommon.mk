@@ -129,6 +129,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
 # Malloc
 MALLOC_SVELTE_FOR_LIBC32 := true
 
+#Vulkan Redering
+TARGET_USES_VULKAN := true
+
 # Kernel Supported Features
 BOARD_RAMDISK_USE_LZ4 := true
 
