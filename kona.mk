@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
 
 # Audio Daemon
 PRODUCT_PACKAGES += audioadsprpcd
-PRODUCT_PACKAGES += vendor.qti.audio-adsprpc-service.rc
+#PRODUCT_PACKAGES += vendor.qti.audio-adsprpc-service.rc
 
 # Audio Alsa Extensions
 PRODUCT_PACKAGES += \
